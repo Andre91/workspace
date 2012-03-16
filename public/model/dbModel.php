@@ -7,6 +7,8 @@ class dbModel
 		require_once '../config/mysql.config.php';
 		//$this->db = new mysqli($mysql["host"], $mysql["user"], $mysql["pass"], $mysql["db"]);
 		$this->db = new PDO("mysql:host=".$mysql['host'].";dbname=".$mysql['db'], $mysql["user"], $mysql["pass"]); 
+	        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
 	}
 	public function insert($statment, $data)
 	{
