@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script src="<?php echo DATA_PFAD; ?>/js/jquery.js"></script>
     <!-- Le styles -->
     <link href="<?php echo DATA_PFAD; ?>/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
@@ -18,7 +18,6 @@
         padding: 9px 0;
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

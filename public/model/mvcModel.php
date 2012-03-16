@@ -10,7 +10,11 @@ class mvcModel
 		$data = $c->$name();
 		unset($name);
 		unset($c);
-		require_once 'view/'.$controller."/".$action.".php";
+		require_once 'view/html/'.$controller."/".$action.".php";
+		if(file_exists('view/js/'.$controller."/".$action.".js.php"))
+		{
+			require_once 'view/js/'.$controller."/".$action.".js.php";
+		}
 	}
 	
 }
