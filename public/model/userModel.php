@@ -8,11 +8,8 @@ class userModel
 	}
 	public function register($mail, $pw)
 	{
-		$stmt = $this->db->getStatment('INSERT INTO `user` (`id`, `mail`, `pw`) VALUES (NULL, ?, ?)');
-		$stmt->bind_param('ss', $mail, hash("sha512", $pw));
-		$stmt->execute();
-		$stmt->close();
-		$id = $this->login($mail, $pw);
+		$res = $this->db->insert('INSERT INTO `user` (`id`, `mail`, `pw`) VALUES (NULL, ?, ?)', array($mail, hash("sha512", $pw)));
+		//$id = $this->login($mail, $pw);
 	}
 	public function login($mail, $pw)
 	{
