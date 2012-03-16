@@ -17,6 +17,8 @@ class dbModel
 			$STH->bindParam($nummer+1, $param);  
 		}
 		return true;
+		$STH->execute();
+		$STH->CloseCursor();
 		}
 		catch(PDOException $e) {  
  		  echo "I'm sorry, Dave. I'm afraid I can't do that.";  
