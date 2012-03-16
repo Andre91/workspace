@@ -17,6 +17,8 @@ while ($datei = readdir ($handle)) {
  	require_once "model/".$datei;
  }
 }
+//Loding Helper
+
 closedir($handle);
 $mvc = new mvcModel();
 $mvc->load("template", "top");

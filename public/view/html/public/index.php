@@ -1,8 +1,8 @@
  <div class="row-fluid" id="loginform" style="display:none;">
  	<div class="span12">
-    <form class="well form-inline">
-    <input type="text" class="input-large" placeholder="Email">
-    <input type="password" class="input-large" placeholder="Password">
+    <form class="well form-inline" action="<?php echo $urlHelper->createURL("public"); ?>">
+    <input type="text" name="mail" class="input-large" placeholder="Email">
+    <input type="password" name="password" class="input-large" placeholder="Password">
     <label class="checkbox">
     <input type="checkbox"> Remember me
     </label>

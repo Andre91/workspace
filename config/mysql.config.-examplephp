@@ -1,0 +1,6 @@
+<?php
+$mysql["host"]="localhost";
+$mysql["user"]="username";
+$mysql["pass"]="passwort";
+$mysql["db"]="workspace";
+?>
