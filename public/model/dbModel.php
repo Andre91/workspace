@@ -12,12 +12,18 @@ class dbModel
 	{
 		try { 
 		$STH = $this->db->prepare($statment); 
-		foreach($data as $nummer => $param)
+		/*foreach($data as $nummer => $param)
 		{
 			$STH->bindParam($nummer+1, $param);  
 		}
-		return true;
-		$STH->execute();
+		 * 
+		 */
+		var_dump($data);
+		echo "<br>";
+		var_dump($statment);
+		echo "<br>";
+		$STH->execute($data);
+		echo "AUSGEFÜHRT";
 		$STH->CloseCursor();
 		}
 		catch(PDOException $e) {  
